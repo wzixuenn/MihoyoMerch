@@ -1,0 +1,288 @@
+.jumbotron img{
+        width: 250px;
+        height: 250px;
+      }
+      .card img{
+        height:180px;
+        object-fit: cover;
+      }
+      .marquee {
+        background-color:rgb(168, 173, 255);
+        color:rgb(255, 255, 255);
+        padding: 10px 0;
+        font-size: 1.3rem;
+      }
+
+        /* Section Animations */
+        .jumbotron, .marquee, #about, #gallery, #kategori, .product-card, .footercopy {
+  opacity: 0;
+  animation: fadeInUp 0.9s ease-out forwards;
+  will-change: opacity, transform;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+        /* About Section */
+      
+      
+        #about h2 {
+            font-weight: bold;
+            color: #9061ff; 
+            text-shadow: 4px 4px 3px rgba(255, 20, 130, 0.562);
+        }
+
+#about p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        
+  #kategori h2 {
+            font-weight: bold;
+            color: #9061ff;
+            margin-bottom: 30px;
+           text-shadow: 4px 4px 3px rgba(255, 20, 130, 0.562);
+        }
+        
+      html {
+  scroll-behavior: smooth;
+}
+
+#about {
+  scroll-margin-top: 80px; 
+}
+
+
+  
+        /* Gallery Section */
+        #gallery {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            padding: 60px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #gallery h2 {
+            font-weight: bold;
+            color: #9061ff;
+      text-shadow: 4px 4px 3px rgba(255, 20, 130, 0.562);
+            margin-bottom: 30px;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
+        }
+
+        .carousel-control-prev, .carousel-control-next {
+            width: 5%;
+        }
+
+        .carousel-indicators button {
+            background-color: #964ae2;
+        }
+        
+.carousel-item img {
+  width: 1600px; 
+  height: 720px; 
+  object-fit: cover;
+  border-radius: 10px; 
+}
+
+
+/*Products*/
+
+
+body {
+      background-color: #f8f9fa;
+      color: #212529;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .product-card {
+      background-color: #ffffff;
+      border-radius: 15px;
+      overflow: hidden;
+      border: 1px solid #e5e7eb;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 20px rgba(151, 47, 255, 0.467);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .product-info {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .product-title {
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+
+    .product-price {
+      color: #bb88ff;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .btn-whatsapp {
+background: linear-gradient(45deg, #c37fff, #878fff);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 15px;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-block;
+      transition: opacity 0.3s ease;
+    }
+
+    .btn-whatsapp:hover {
+      opacity: 0.85;
+      color: white;
+    }
+
+    
+    /* Custom navbar color override */
+    .navbar {
+      background-color: rgb(187, 175, 255) !important; /* Light purple */
+    }
+
+    .jumbotron {
+      background-image: url('img/backdrop.jpg'); 
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+ .footercopy {
+    background-color: rgb(187, 175, 255) !important;
+    color: white; 
+ }
+
+html, body {
+  background-color: #ffffff !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
+section {
+  background-color: #ffffff !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+#about {
+  margin-bottom: -1px !important;
+}
+
+/* Dark theme overrides */
+body {
+  background-color: #1a1a1a !important; /* Dark gray background for the whole page */
+  color: #ffffff !important; /* White text for body content */
+}
+
+.navbar-brand, .nav-link, .dropdown-item {
+  color: #ffffff !important; /* Ensure navbar links are white */
+}
+
+.jumbotron {
+  background-color: #2a2a2a !important; /* Dark gray overlay on the background image */
+  color: #ffffff !important; /* White text in jumbotron */
+}
+
+
+#about {
+  background-color: #2a2a2a !important; /* Dark gray for about section */
+  color: #ffffff !important; /* White text */
+}
+
+#gallery {
+  background: linear-gradient(135deg, #333333 0%, #111111 100%) !important; /* Dark gradient for gallery */
+  color: #ffffff !important; /* White text */
+}
+
+#kategori {
+  background-color: #2a2a2a !important; /* Dark gray for products section */
+  color: #ffffff !important; /* White text */
+}
+
+.product-card {
+  background-color: #333333 !important; /* Dark gray for product cards */
+  color: #ffffff !important; /* White text inside cards */
+  border: 1px solid #555555 !important; /* Subtle dark border */
+}
+
+
+
+/* Ensure sections don't have unwanted light borders or shadows */
+section {
+  background-color: #2a2a2a !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Override any remaining Bootstrap light classes */
+.bg-white, .bg-light {
+  background-color: #2a2a2a !important;
+  color: #ffffff !important;
+}
+
+/* 1. Fix hover animation for product cards (ensure box-shadow isn't overridden globally) */
+.product-card:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 20px 20px rgba(166, 0, 255, 0.15) !important; /* Slightly increased opacity for visibility on dark bg */
+}
+/* 2. Remove awkward line between About Us and Gallery (seamless transition) */
+#about {
+  margin-bottom: 0 !important; /* Override the -1px to prevent seams */
+  border-bottom: none !important;
+}
+#gallery {
+  margin-top: 0 !important; /* Ensure no gap at top */
+}
+/* 3. Fix entrance animation glitching (add slight delay and ensure no conflicts) */
+.jumbotron, .marquee, #about, #gallery, #kategori, .product-card, .footercopy {
+  animation-delay: 0.1s; /* Small delay to prevent glitches */
+  animation-fill-mode: both; /* Ensure animation completes properly */
+}
+
+/* Make dropdown menu dark */
+.dropdown-menu {
+  background-color: #333333 !important; /* Dark gray for dropdown */
+  color: #ffffff !important; /* White text */
+  border: 1px solid #555555 !important; /* Subtle dark border */
+}
+.dropdown-item {
+  color: #ffffff !important; /* White text for items */
+}
+.dropdown-item:hover {
+  background-color: #555555 !important; /* Darker hover for items */
+}
+
+
+
+
+

@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Profile - Mihoyo Merchandise Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+
+      .jumbotron img {
+        width: 250px;
+        height: 250px;
+      }
+      .card img {
+        height: 180px;
+        object-fit: cover;
+      }
+      .marquee {
+        background-color: rgb(187, 175, 255);
+        color: rgb(255, 255, 255);
+        padding: 10px 0;
+        font-size: 1.3rem;
+      }
+
+.profile-header {
+  background: url('img/backdropM.jpg') no-repeat center center; 
+  background-size: cover;
+  color: white;
+  padding: 50px 0 0 0;
+  text-align: center;
+}
+
+section.container {
+  padding-top: 0 !important;
+}
+
+
+
+      html {
+        scroll-behavior: smooth;
+      }
+      #about {
+        scroll-margin-top: 80px;
+      }
+      body {
+        background-color: #f8f9fa;
+        color: #212529;
+        font-family: 'Poppins', sans-serif;
+
+      }
+      .profile-pic {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 5px solid white;
+        margin-bottom: 20px;
+      }
+      .section-card {
+        background-color: #ffffff;
+        border-radius: 15px;
+        padding: 20px;
+        margin-bottom: 20px;
+        border: 1px solid #e5e7eb;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      .section-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+      }
+      .favorite-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+      .favorite-item img {
+        width: 80px;
+        height: 80px;
+        border-radius: 10px;
+        margin-right: 15px;
+        object-fit: cover;
+      }
+      .btn-whatsapp {
+        background: linear-gradient(45deg, #c37fff, #878fff);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        padding: 10px 15px;
+        font-weight: 500;
+        text-decoration: none;
+        display: inline-block;
+        transition: opacity 0.3s ease;
+      }
+      .btn-whatsapp:hover {
+        opacity: 0.85;
+        color: white;
+      }
+
+    /* Custom navbar color override */
+    .navbar {
+      background-color: rgb(187, 175, 255) !important; /* Light purple */
+    }
+
+
+ .footercopy {
+    background-color: rgb(187, 175, 255) !important;
+    color: white; 
+ }
+
+
+   /* Slide-up animation keyframes */
+  @keyframes slideUp {
+    from {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  /* Apply slide-up animation to all relevant elements */
+  .profile-header, .profile-pic, .section-card, .favorite-item, .btn-whatsapp, .footercopy {
+    animation: slideUp 1s ease-out;
+  }
+  
+
+    </style>
+  </head>
+  <body id="home">
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="index.html"> <!-- Assuming main page is index.html -->
+          <img src="img/MariusHEHE.jpg" alt="logo marius" width="60" class="me-2 rounded-circle"/>
+          <span>Mihoyo Merchandise Store</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#home">Home</a> <!-- Link back to main page -->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#about">About Us</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" id="KategoriDropdown">Product Category</a>
+              <ul class="dropdown-menu" aria-labelledby="KategoriDropdown">
+                <li><a class="dropdown-item kategori-item" href="index.html" data-kategori="Marius">All Products</a></li>
+                <li><a class="dropdown-item kategori-item" href="index.html" data-kategori="Clothing">Clothing</a></li>
+                <li><a class="dropdown-item kategori-item" href="index.html" data-kategori="Acc">Accessories</a></li>
+                <li><a class="dropdown-item kategori-item" href="index.html" data-kategori="Bling">Jewelleries</a></li>
+                <li><a class="dropdown-item kategori-item" href="index.html" data-kategori="Merchandise">Merchandise</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" id="ContactDropdown">Contact</a>
+              <ul class="dropdown-menu" aria-labelledby="ContactDropdown">
+                <li><a class="dropdown-item" href="https://www.instagram.com/xuen2x/" target="_blank">Instagram</a></li>
+                <li><a class="dropdown-item" href="https://wa.me/6281365174385" target="_blank">WhatsApp</a></li>
+                <li><a class="dropdown-item" href="https://x.com/mariusrealwife" target="_blank">X, Twitter</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="profile.html">My Profile</a> <!-- Active for this page -->
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Profile Header -->
+    <header class="profile-header mt-5 pt-5">
+      <img src="img/MariusHEHE.jpg" alt="Profile Picture" class="profile-pic"/>
+      <h1 class="display-5 fw-bold" style="color: white; text-shadow: 2px 2px 4px rgba(70, 2, 228, 0.8);">Marius' #1 Fan </h1>
+      <p class="lead" style="color: white; text-shadow: 2px 2px 4px rgba(145, 2, 228, 0.818);">NO MARIUS NO LIFE. A dedicated fan of miHoYo's universe, collecting and sharing the best merchandise!</p>
+      <div class="marquee">
+        <marquee behavior="" direction="">我要像陆景和一样成为有钱人。陆门！！！</marquee>
+      </div>
+    </header>
+
+    <!-- Profile Sections -->
+    <section class="container py-5">
+      <div class="row">
+        <!-- Bio Section -->
+        <div class="col-lg-6">
+          <div class="section-card">
+            <h3>About Me</h3>
+            <p>Hi! I'm Marius von Hagen's biggest fan. I love everything miHoYo – from Genshin Impact to Honkai: Star Rail. This store is my passion project to bring authentic merchandise to fellow hoyoverse enthusiasts. Let's connect and share our love for the games!</p>
+            <h5>Favorite Quote:</h5>
+            <p>"NO MARIUS NO LIFE."</p>
+          </div>
+        </div>
+
+        <!-- Favorites Section -->
+        <div class="col-lg-6">
+          <div class="section-card">
+            <h3>My Favorite Products</h3>
+            <div class="favorite-item">
+              <img src="img/PJS.jpg" alt="PJS">
+              <div>
+                <h6>【未定事件簿】甜梦系列纯棉长袖家居服套装陆景和 miHoYo</h6>
+                <p>Rp 470.000</p>
+              </div>
+            </div>
+            <div class="favorite-item">
+              <img src="img/MariusRinh.jpg" alt="Ring">
+              <div>
+                <h6>【未定事件簿】Infinito & Infinita Ring 心动誓约对戒 陆景和</h6>
+                <p>Rp 600.000</p>
+              </div>
+            </div>
+            <div class="favorite-item">
+              <img src="img/Robin.jpg" alt="Robin">
+              <div>
+                <h6>【米哈游/崩坏：星穹铁道】群星回响系列亚克力挂件 miHoYo</h6>
+                <p>Rp 80.000</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Section -->
+      <div class="row">
+        <div class="col-12">
+          <div class="section-card text-center">
+            <h3>Get In Touch</h3>
+            <p>Want to chat about miHoYo merch or place an order? Hit me up!</p>
+            <a href="https://wa.me/6281365174385" target="_blank" class="btn-whatsapp">Message on WhatsApp</a>
+            <p class="mt-3">Follow me on socials for updates!</p>
+            <a href="https://www.instagram.com/xuen2x/" target="_blank" class="btn btn-outline-primary me-2">Instagram</a>
+            <a href="https://x.com/mariusrealwife" target="_blank" class="btn btn-outline-primary">X (Twitter)</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-opacity-50 text-white text-center p-3 footercopy">
+      &copy; 2025 by Whitney. All rights reserved. Made with &hearts; by
+      <a href="https://www.instagram.com/xuen2x/" class="text fw-bold" style="color: rgb(162, 96, 255); text-decoration: none;"> Whitney </a>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 0);
+  });
+    </script>
+  </body>
+</html>
