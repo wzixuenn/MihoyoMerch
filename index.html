@@ -5,10 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet">
-    <title>I love marius so much</title>
+    <title>Marius is goated</title>
     </head>
   <body id="home">
-    <div id="custom-cursor"></div>
+   <audio id="bg-music" autoplay loop preload="auto">
+     <source src="audio/BoundlessLove.mp3" type="audio/mpeg">
+     <source src="audio/MarvelousMoments.mp3" type="audio/mpeg">
+ <source src="audio/FreshNFancy.mp3" type="audio/mpeg">
+  <source src="audio/MarvelousMomentsEvocation.mp3" type="audio/mpeg">
+      <source src="audio/Rhapsody of Romance.mp3" type="audio/mpeg">
+</audio>
+<audio id="easter-sound" src="audio/Jiejie.mp3"></audio>
     <nav class="navbar navbar-expand-lg fixed-top shadow-sm navbar-dark">
   <div class="container-fluid">
     <a class="navbar-brand d-flex align-items-center" href="#">
@@ -42,11 +49,23 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" id="ContactDropdown">Contact</a>
           <ul class="dropdown-menu" aria-labelledby="ContactDropdown">
-            <li><a class="dropdown-item" href="https://www.instagram.com/xuen2x/" target="_blank">Instagram</a></li>
+            <li><a class="dropdown-item" href="https://www.instagram.com/xuen2x" target="_blank">Instagram</a></li>
             <li><a class="dropdown-item" href="https://wa.me/6281365174385" target="_blank">WhatsApp</a></li> 
-            <li><a class="dropdown-item" href="https://x.com/mariusrealwife" target="_blank">X, Twitter</a></li> 
+            <li><a class="dropdown-item" href="https://x.com/ChrSakuraa" target="_blank">X, Twitter</a></li> 
           </ul> 
         </li>
+        <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" id="MusicDropdown">Music</a>
+  <ul class="dropdown-menu" aria-labelledby="MusicDropdown">
+    <li><a class="dropdown-item music-track" href="#" data-track="audio/MarvelousMoments.mp3">Track 1</a></li>
+    <li><a class="dropdown-item music-track" href="#" data-track="audio/MarvelousMomentsEvocation.mp3">Track 2</a></li>
+    <li><a class="dropdown-item music-track" href="#" data-track="audio/Rhapsody Of Romance.mp3">Track 3</a></li>
+        <li><a class="dropdown-item music-track" href="#" data-track="audio/FreshNFancy.mp3">Track 4</a></li>
+            <li><a class="dropdown-item music-track" href="#" data-track="audio/BoundlessLove.mp3">Track 5</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#" id="mute-toggle">Mute Music</a></li>
+  </ul>
+</li>
         <li class="nav-item">
           <a class="nav-link" href="profile.html">My Profile</a>
         </li>
@@ -58,13 +77,16 @@
 </nav>
 
 <!--imagelogo-->
-<header class="jumbotron text-center mt-5 pt-5"> 
-<img src="img/MariusHEHE.jpg" alt="logo marius" class="rounded-circle img-thumbnail"/>
-<h1 class="display-5 mt-3 fw-bold" style="color: white; text-shadow: 3px 3px 4px rgba(255, 0, 247, 0.8);">NO MARIUS NO LIFE.</h1> 
+<header class="jumbotron text-center"> 
+ 
+<img src="img/MariusHEHE.jpg" alt="logo marius" class="rounded-circle img-thumbnail" id="easter-img" style="cursor:pointer;" />
+  <h1 class="display-5 mt-3 fw-bold" style="color: white; text-shadow: 3px 3px 4px rgba(255, 0, 247, 0.8);" id="dynamic-header">Welcome to Mihoyo Merchandise Store!</h1> 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-  <div class="marquee">
-    <marquee behavior="" direction="" style="vertical-align: middle;">我要像陆景和一样成为有钱人。陆门！！！</marquee>
+<div class="marquee">
+  <div class="marquee-content" id="dynamic-marquee">
+    我的心里只有陆景和。
   </div>
+</div>
   </header>
   
 <!--aboutus-->
@@ -72,12 +94,17 @@
     <div class="container text-center">
       <h2>About Us </h2>
       <p class="mt-3">
-        <strong> Mihoyo Merchandise Store </strong>    is your one-stop shopping platform for shopping for miHoYo's game merchandise and more! Our mission is to bring you beautiful gaming merchandise.
+        <strong> Mihoyo Merchandise Store </strong> Mihoyo Merchandise Store is your ultimate destination for all things miHoYo and HoYoverse — a one-stop platform dedicated to fans who want to bring their favorite games to life through authentic, high-quality merchandise.
 
-Since opening in 2025, Mihoyo Merchandise Store has grown from a tiny passion project to a go-to place for hoyoverse gaming perimeter enthusiasts. With community at the core, with a focus on quality, authenticity and innovation, we are committed to bringing the best moments, big and small, closer to you.
+<br><br>
 
-Our Commitment
-Mihoyo Merchandise Store guarantees that the official products are 100% authentic. As a one-stop miHoYo gaming merchandise store, we offer authentic merchandise from Genshin Impact, Honkai: Star Rail, Zenless Zone Zero and Honkai Impact 3rd!
+        Our journey began in 2025, as a small passion project created by fans, for fans. What started as a humble idea quickly grew into a vibrant community hub where Hoyoverse enthusiasts from around the world can connect, collect, and celebrate the universes they love — from Genshin Impact and Honkai: Star Rail, to Zenless Zone Zero and Honkai Impact 3rd.
+
+<br><br>
+
+At Mihoyo Merchandise Store, we believe gaming is more than just a hobby — it’s an experience, a story, and a source of inspiration. That’s why our mission is to bring you beautifully crafted products that capture the spirit, artistry, and emotion behind every character and world. From stunning apparel and collectibles to limited-edition items and accessories, each piece is carefully selected to ensure quality, authenticity, and creativity.
+
+With community at our core, we’re constantly evolving to meet the expectations of passionate fans like you. Whether you’re a seasoned adventurer of Teyvat, a Trailblazer exploring the stars, or a newcomer diving into the chaos of New Eridu, we’re here to make sure you can proudly showcase your love for these incredible worlds.
       </p>
     </div>
   </section>
@@ -101,19 +128,19 @@ Mihoyo Merchandise Store guarantees that the official products are 100% authenti
                     <img src="img/MariusBadge.jpg" alt="Marius">
                 </div>
                 <div class="carousel-item">
-                    <img src="img/MariusBdayMerch.jpg" alt="Marius von Hagen Is Life">
+                    <img src="img/MariusBday3.jpg" alt="Marius von Hagen Is Life">
                 </div>
                 <div class="carousel-item">
-                    <img src="img/MariusPlushDisplay.jpg" alt="Marius">
+                    <img src="img/BdayMarius.jpg" alt="Marius">
                 </div>
                 <div class="carousel-item">
-                    <img src="img/MariusBornday.jpg" alt="Honkai Impact 3rd Scene">
+                    <img src="img/MariusBdayMerch.jpg" alt="Marius von Hagen">
                 </div>
                 <div class="carousel-item">
-                    <img src="img/BdayMarius.jpg" alt="Merchandise Display">
+                    <img src="img/MariusBornday.jpg" alt="Merchandise Display">
                 </div>
                 <div class="carousel-item">
-                    <img src="img/MariusCar.jpg" alt="Fan Art">
+                    <img src="img/KingBday.jpg" alt="Marius">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
@@ -296,15 +323,7 @@ Mihoyo Merchandise Store guarantees that the official products are 100% authenti
     </div>
   </div>
 
-      <!-- Product Card 15 clothing -->
-  <div class="product-card" data-kategori="Clothing" style="width: 300px; max-width: 100%;">
-    <img src="img/MariusBadge.jpg" alt="Outfit">
-    <div class="product-info">
-      <h5 class="product-title">【米哈游/崩坏：星穹铁道】知更鸟主题印象系列连衣裙 miHoYo</h5>
-      <p class="product-price">Rp 900.000</p>
-      <a href="https://wa.me/6281365174385" target="_blank" class="btn-whatsapp">Message on WhatsApp</a>
-    </div>
-  </div>
+  
 
 
 </div>
@@ -313,17 +332,9 @@ Mihoyo Merchandise Store guarantees that the official products are 100% authenti
 <!---footer-->
 <footer class="bg-info bg-opacity-50 text-white text-center p-3 footercopy">
 &copy; 2025 by Whitney. All rights reserved. Made with &hearts; by
-<a href="https://www.instagram.com/xuen2x/" class="text-white- fw-bold" style="color: rgb(162, 96, 255); text-decoration: none;"> Whitney </a> 
+<a href="https://www.instagram.com/xuen2x/" class="text-white- fw-bold" style="color:  rgb(110, 88, 255); text-decoration: none;"> Whitney </a> 
 </footer>
 
-<script>
-  window.addEventListener("load", () => {
-    setTimeout(() => {
-      window.scrollTo(0, 0);
-    }, 0);
-  });
-
-</script>
 </body>
 <!--JavaScriptHeehee-->
 <script>
@@ -343,14 +354,13 @@ Mihoyo Merchandise Store guarantees that the official products are 100% authenti
         }
       });
 
-      // scroll smoothly to the product section
       document.getElementById("kategori").scrollIntoView({
         behavior: "smooth"
       });
     });
   });
 
-  // Dynamic WhatsApp message setup
+  // whatsApp message setup
   document.addEventListener('DOMContentLoaded', function() {
     const productCards = document.querySelectorAll('.product-card');
     productCards.forEach(card => {
@@ -364,6 +374,100 @@ Mihoyo Merchandise Store guarantees that the official products are 100% authenti
   });
   
 
-  
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 0);
+  });
+
+
+// Music controls
+const audio = document.getElementById('bg-music');
+audio.volume = 0.2; 
+const muteToggle = document.getElementById('mute-toggle');
+const musicTracks = document.querySelectorAll('.music-track');
+
+let isMuted = false;
+
+// Mute toggle
+muteToggle.addEventListener('click', function(e) {
+  e.preventDefault();
+  if (isMuted) {
+    audio.muted = false;
+    muteToggle.textContent = 'Mute Music';
+    isMuted = false;
+  } else {
+    audio.muted = true;
+    muteToggle.textContent = 'Unmute Music';
+    isMuted = true;
+  }
+});
+
+musicTracks.forEach(track => {
+  track.addEventListener('click', function(e) {
+    e.preventDefault();
+    const newSrc = this.dataset.track;
+    audio.src = newSrc; 
+    audio.muted = false; 
+    audio.volume = 0.6; 
+    audio.play();
+  });
+});
+
+
+document.querySelector(".jumbotron").addEventListener("click", () => {
+  const sound = document.getElementById("easter-sound");
+  sound.currentTime = 0;
+  sound.volume = 0.8; 
+  sound.play();
+});
+
+const marqueeTexts = [
+    "我的心里只有陆景和。",
+    "Discover authentic miHoYo merch.",
+        "Every Case Tells a Story — Every Item Holds a Memory",
+];
+
+
+const headerTexts = [
+    "Your Gateway to Official Mihoyo Goodies",
+    "Welcome to Mihoyo Merchandise Store!",
+    "Level Up Your Collection!",
+    "Mihoyo Merch — Powered by Passion",
+     "Hello!! :3"
+];
+
+
+window.addEventListener("load", () => {
+    const randomText = marqueeTexts[Math.floor(Math.random() * marqueeTexts.length)];
+    document.getElementById('dynamic-marquee').innerHTML = randomText;
+
+        
+    const randomHeader = headerTexts[Math.floor(Math.random() * headerTexts.length)];
+    document.getElementById('dynamic-header').innerHTML = randomHeader;
+    
+    
+    setTimeout(() => {
+        window.scrollTo(0, 0);
+    }, 0);
+});
+
+    const observerOptions = {
+      threshold: 0.1, 
+      rootMargin: '0px 0px -50px 0px' 
+    };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate');
+        }
+      });
+    }, observerOptions);
+   
+    const aboutH2 = document.querySelector('#about h2');
+    const aboutP = document.querySelector('#about p');
+    if (aboutH2) observer.observe(aboutH2);
+    if (aboutP) observer.observe(aboutP);
+
 </script>
 </html>

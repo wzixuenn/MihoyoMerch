@@ -7,108 +7,211 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <style>
 
-      .jumbotron img {
-        width: 250px;
-        height: 250px;
-      }
-      .card img {
-        height: 180px;
-        object-fit: cover;
-      }
-      .marquee {
-        background-color: rgb(187, 175, 255);
-        color: rgb(255, 255, 255);
-        padding: 10px 0;
-        font-size: 1.3rem;
-      }
-
-.profile-header {
-  background: url('img/backdropM.jpg') no-repeat center center; 
-  background-size: cover;
-  color: white;
-  padding: 50px 0 0 0;
-  text-align: center;
-}
-
-section.container {
-  padding-top: 0 !important;
-}
-
-
-
-      html {
-        scroll-behavior: smooth;
-      }
-      #about {
-        scroll-margin-top: 80px;
-      }
       body {
-        background-color: #f8f9fa;
-        color: #212529;
+        background: linear-gradient(135deg,  rgba(28, 10, 52, 0.9), #1a0033, #442b94); 
+        color: #e2d2ff;
         font-family: 'Poppins', sans-serif;
-
+        overflow-x: hidden;
+        position: relative;
       }
+
+     
+       .navbar {
+        background: linear-gradient(45deg, rgba(209, 172, 255, 0.804), rgba(187, 175, 255, 0.837)) !important;
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 0 20px rgba(187, 175, 255, 0.5);
+      }
+
+      .profile-header {
+        background: url('img/backdropM.jpg') no-repeat center center;
+        background-size: cover;
+     background-blend-mode: overlay;
+        background-color: rgba(58, 0, 203, 0.3);
+        color: white;
+        padding: 80px 0 20px 0; 
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .profile-header::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+        animation: floaty 6s ease-in-out infinite;
+      }
+
       .profile-pic {
-        width: 200px;
-        height: 200px;
+        width: 220px;
+        height: 220px;
         border-radius: 50%;
         object-fit: cover;
-        border: 5px solid white;
-        margin-bottom: 20px;
+        border: 5px solid rgba(255, 255, 255, 0.8);
+        box-shadow: 0 0 30px rgba(187, 175, 255, 0.8);
+        margin-bottom: 30px;
+        animation: floaty 4s ease-in-out infinite;
       }
+
+      h1 {
+        font-family: 'Dancing Script', cursive;
+        font-size: 3rem;
+        text-shadow: 0 0 20px rgba(255, 182, 193, 0.8), 2px 2px 4px rgba(0, 0, 0, 0.5);
+        animation: floaty 5s ease-in-out infinite;
+      }
+
+      .lead {
+        font-style: italic;
+        text-shadow: 0 0 15px rgba(162, 96, 255, 0.6);
+        animation: fadeInUp 2s ease-out;
+      }
+
+      .marquee {
+        background: linear-gradient(45deg, rgba(187, 175, 255, 0.9), rgba(255, 182, 193, 0.9));
+        color: white;
+        padding: 5px 0;
+        font-size: 1.2rem;
+        font-family: 'Dancing Script', cursive;
+        border-radius: 20px;
+        margin-top: 20px;
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+      }
+
+      .marquee {
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee-content {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%;
+  animation: marqueeMove 12s linear infinite;
+}
+
+@keyframes marqueeMove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+ 
+
       .section-card {
-        background-color: #ffffff;
-        border-radius: 15px;
-        padding: 20px;
-        margin-bottom: 20px;
-        border: 1px solid #e5e7eb;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(15px);
+        border-radius: 25px;
+        padding: 30px;
+        margin-bottom: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 0 25px rgba(187, 175, 255, 0.4);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        animation: fadeInUp 1.5s ease-out;
       }
+
       .section-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 0 40px rgba(255, 182, 193, 0.6);
       }
+
+      .section-card h3 {
+        font-family: 'Dancing Script', cursive;
+        color: #d0b6ff;
+        text-shadow: 0 0 10px rgba(222, 192, 255, 0.967);
+      }
+
       .favorite-item {
         display: flex;
         align-items: center;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
+        padding: 15px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 15px;
+        transition: transform 0.2s ease;
       }
+
+      .favorite-item:hover {
+        transform: translateX(10px);
+      }
+
       .favorite-item img {
-        width: 80px;
-        height: 80px;
-        border-radius: 10px;
-        margin-right: 15px;
+        width: 90px;
+        height: 90px;
+        border-radius: 15px;
+        margin-right: 20px;
         object-fit: cover;
+        box-shadow: 0 0 15px rgba(162, 96, 255, 0.5);
       }
+
       .btn-whatsapp {
         background: linear-gradient(45deg, #c37fff, #878fff);
         color: white;
         border: none;
-        border-radius: 8px;
-        padding: 10px 15px;
+        border-radius: 20px;
+        padding: 12px 20px;
         font-weight: 500;
         text-decoration: none;
         display: inline-block;
-        transition: opacity 0.3s ease;
+        box-shadow: 0 0 20px rgba(195, 127, 255, 0.6);
+        transition: all 0.3s ease;
+        animation: pulse 2s infinite;
       }
+
       .btn-whatsapp:hover {
-        opacity: 0.85;
+        transform: scale(1.05);
+        box-shadow: 0 0 30px rgba(255, 182, 193, 0.8);
         color: white;
       }
 
-    /* Custom navbar color override */
-    .navbar {
-      background-color: rgb(187, 175, 255) !important; /* Light purple */
-    }
+     .footercopy {
+  background: linear-gradient(45deg, rgba(209, 172, 255, 0.804), rgba(187, 175, 255, 0.837));
+  color: white;
+  padding: 20px 0;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(187, 175, 255, 0.5);
+  animation: fadeInUp 2s ease-out;
+}
+
+      /* Animations */
+      @keyframes floaty {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-15px); }
+      }
+
+      @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      @keyframes pulse {
+        0%, 100% { box-shadow: 0 0 20px rgba(195, 127, 255, 0.6); }
+        50% { box-shadow: 0 0 30px rgba(255, 182, 193, 0.8); }
+      }
+
+      /* Custom cursor */
+      body {
+        cursor: url("img/m\ \(1\).png") 32 32, auto;
+      }
+
+      a, button {
+        cursor: url("img/m\ \(2\).png") 16 16, pointer;
+      }
 
 
- .footercopy {
-    background-color: rgb(187, 175, 255) !important;
-    color: white; 
- }
+      @media (max-width: 768px) {
+        .profile-pic { width: 180px; height: 180px; }
+        h1 { font-size: 2.5rem; }
+        .section-card { padding: 20px; }
+      }
 
-
-   /* Slide-up animation keyframes */
+   /* keyframes */
   @keyframes slideUp {
     from {
       transform: translateY(50px);
@@ -120,18 +223,60 @@ section.container {
     }
   }
 
-  /* Apply slide-up animation to all relevant elements */
+  /* slide-up animation to all elements */
   .profile-header, .profile-pic, .section-card, .favorite-item, .btn-whatsapp, .footercopy {
     animation: slideUp 1s ease-out;
   }
-  
+      
+header.profile-header {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.profile-header .marquee {
+  margin-bottom: 0 !important;
+ 
+}
+
+  .navbar-nav .nav-link {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff; 
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.7s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+
+
 
     </style>
   </head>
   <body id="home">
+   <audio id="bg-music" autoplay loop preload="auto">
+   <source src="audio/MarvelousMomentsEvocation.mp3" type="audio/mpeg"> 
+   <source src="audio/MarvelousMoments.mp3" type="audio/mpeg">
+ <source src="audio/FreshNFancy.mp3" type="audio/mpeg">
+      <source src="audio/Rhapsody of Romance.mp3" type="audio/mpeg">
+         <source src="audio/BoundlessLove.mp3" type="audio/mpeg">
+          <audio id="easter-sound" src="audio/Jiejie.mp3" preload="auto"> </audio>
+</audio>
     <nav class="navbar navbar-expand-lg fixed-top shadow-sm navbar-dark">
       <div class="container-fluid">
-        <a class="navbar-brand d-flex align-items-center" href="index.html"> <!-- Assuming main page is index.html -->
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
           <img src="img/MariusHEHE.jpg" alt="logo marius" width="60" class="me-2 rounded-circle"/>
           <span>Mihoyo Merchandise Store</span>
         </a>
@@ -141,7 +286,7 @@ section.container {
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="index.html#home">Home</a> <!-- Link back to main page -->
+              <a class="nav-link" href="index.html#home">Home</a> 
             </li>
             <li class="nav-item">
               <a class="nav-link" href="index.html#about">About Us</a>
@@ -161,11 +306,23 @@ section.container {
               <ul class="dropdown-menu" aria-labelledby="ContactDropdown">
                 <li><a class="dropdown-item" href="https://www.instagram.com/xuen2x/" target="_blank">Instagram</a></li>
                 <li><a class="dropdown-item" href="https://wa.me/6281365174385" target="_blank">WhatsApp</a></li>
-                <li><a class="dropdown-item" href="https://x.com/mariusrealwife" target="_blank">X, Twitter</a></li>
+                <li><a class="dropdown-item" href="https://x.com/ChrSakuraa" target="_blank">X, Twitter</a></li>
               </ul>
             </li>
+         <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" id="MusicDropdown">Music</a>
+  <ul class="dropdown-menu" aria-labelledby="MusicDropdown">
+    <li><a class="dropdown-item music-track" href="#" data-track="audio/MarvelousMoments.mp3">Track 1</a></li>
+    <li><a class="dropdown-item music-track" href="#" data-track="audio/MarvelousMomentsEvocation.mp3">Track 2</a></li>
+    <li><a class="dropdown-item music-track" href="#" data-track="audio/Rhapsody Of Romance.mp3">Track 3</a></li>
+        <li><a class="dropdown-item music-track" href="#" data-track="audio/FreshNFancy.mp3">Track 4</a></li>
+            <li><a class="dropdown-item music-track" href="#" data-track="audio/BoundlessLove.mp3">Track 5</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#" id="mute-toggle">Mute Music</a></li>
+  </ul>
+</li>
             <li class="nav-item">
-              <a class="nav-link active" href="profile.html">My Profile</a> <!-- Active for this page -->
+              <a class="nav-link active" href="profile.html">My Profile</a> 
             </li>
           </ul>
         </div>
@@ -174,16 +331,18 @@ section.container {
 
     <!-- Profile Header -->
     <header class="profile-header mt-5 pt-5">
-      <img src="img/MariusHEHE.jpg" alt="Profile Picture" class="profile-pic"/>
-      <h1 class="display-5 fw-bold" style="color: white; text-shadow: 2px 2px 4px rgba(70, 2, 228, 0.8);">Marius' #1 Fan </h1>
-      <p class="lead" style="color: white; text-shadow: 2px 2px 4px rgba(145, 2, 228, 0.818);">NO MARIUS NO LIFE. A dedicated fan of miHoYo's universe, collecting and sharing the best merchandise!</p>
-      <div class="marquee">
-        <marquee behavior="" direction="">我要像陆景和一样成为有钱人。陆门！！！</marquee>
-      </div>
+      <img src="img/Rosa.jpg" alt="Profile Picture" class="profile-pic"/>
+      <h1 class="display-5 fw-bold" style="color: white; text-shadow: 2px 2px 4px rgba(70, 2, 228, 0.8);"id="dynamic-header">Marius' #1 Fan </h1>
+      <p class="lead" style="color: white; text-shadow: 2px 2px 4px rgba(149, 8, 230, 0.905);">A dedicated fan of miHoYo's universe, collecting and sharing the best merchandise!</p>
+<div class="marquee">
+  <div class="marquee-content" id="dynamic-marquee">
+    我要像陆景和一样成为有钱人！！！ 陆门！！
+  </div>
+</div>
     </header>
 
     <!-- Profile Sections -->
-    <section class="container py-5">
+    <section id="profile" class="container py-5">
       <div class="row">
         <!-- Bio Section -->
         <div class="col-lg-6">
@@ -233,7 +392,7 @@ section.container {
             <a href="https://wa.me/6281365174385" target="_blank" class="btn-whatsapp">Message on WhatsApp</a>
             <p class="mt-3">Follow me on socials for updates!</p>
             <a href="https://www.instagram.com/xuen2x/" target="_blank" class="btn btn-outline-primary me-2">Instagram</a>
-            <a href="https://x.com/mariusrealwife" target="_blank" class="btn btn-outline-primary">X (Twitter)</a>
+            <a href="https://x.com/ChrSakuraa" target="_blank" class="btn btn-outline-primary">X (Twitter)</a>
           </div>
         </div>
       </div>
@@ -242,15 +401,86 @@ section.container {
     <!-- Footer -->
     <footer class="bg-opacity-50 text-white text-center p-3 footercopy">
       &copy; 2025 by Whitney. All rights reserved. Made with &hearts; by
-      <a href="https://www.instagram.com/xuen2x/" class="text fw-bold" style="color: rgb(162, 96, 255); text-decoration: none;"> Whitney </a>
+      <a href="https://www.instagram.com/xuen2x/" class="text fw-bold" style="color: rgb(110, 88, 255); text-decoration: none;"> Whitney </a>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
-  window.addEventListener("load", () => {
-    setTimeout(() => {
-      window.scrollTo(0, 0);
-    }, 0);
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+  crossorigin="anonymous"></script>
+
+<!-- Custom JS -->
+<script>
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    window.scrollTo(0, 0);
+  }, 0);
+});
+
+// Music controls 
+const audio = document.getElementById('bg-music');
+audio.volume = 0.2; 
+const muteToggle = document.getElementById('mute-toggle');
+const musicTracks = document.querySelectorAll('.music-track');
+
+let isMuted = false;
+
+musicTracks.forEach(track => {
+  track.addEventListener('click', function(e) {
+    e.preventDefault();
+    const newSrc = this.dataset.track;
+    audio.src = newSrc; 
+    audio.muted = false; 
+    audio.volume = 0.6; 
+    audio.play();
   });
-    </script>
+});
+
+// Mute toggle 
+muteToggle.addEventListener('click', function(e) {
+  e.preventDefault();
+  if (isMuted) {
+    audio.muted = false;
+    muteToggle.textContent = 'Mute Music';
+    isMuted = false;
+  } else {
+    audio.muted = true;
+    muteToggle.textContent = 'Unmute Music';
+    isMuted = true;
+  }
+});
+
+  //marquee texts
+const marqueeTexts = [
+    "可以给我钱吗？",
+    "谢谢米哈游！！！！"
+];
+
+// Array of header texts 
+const headerTexts = [
+    "Yingxue.",
+    "@W.zixuen",
+    "Marius #1 fan.",
+    "The one and only passionate Marius Fan",
+    "Hi!."
+];
+
+// Function to set random text on load
+window.addEventListener("load", () => {
+    const randomText = marqueeTexts[Math.floor(Math.random() * marqueeTexts.length)];
+    document.getElementById('dynamic-marquee').innerHTML = randomText;
+    
+        // Randomized header
+    const randomHeader = headerTexts[Math.floor(Math.random() * headerTexts.length)];
+    document.getElementById('dynamic-header').innerHTML = randomHeader;
+
+    //scroll to top code
+    setTimeout(() => {
+        window.scrollTo(0, 0);
+    }, 0);
+});
+
+</script>
+
   </body>
 </html>
